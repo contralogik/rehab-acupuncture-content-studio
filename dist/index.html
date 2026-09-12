@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1726">
+  <meta name="description" content="康复与针灸医生的内容定位、选题、脚本、排期与复盘工作台。">
+  <title>复健针言 · 内容作战台</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="主导航">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">复</span>
+        <div><strong>复健针言</strong><small>内容作战台</small></div>
+      </div>
+      <nav class="nav-list">
+        <button class="nav-item is-active" data-view="dashboard"><span>01</span>今日作战台</button>
+        <button class="nav-item" data-view="strategy"><span>02</span>定位与方法论</button>
+        <button class="nav-item" data-view="library"><span>03</span>选题库</button>
+        <button class="nav-item" data-view="script"><span>04</span>脚本工坊</button>
+        <button class="nav-item" data-view="calendar"><span>05</span>90 天计划</button>
+        <button class="nav-item" data-view="records"><span>06</span>发布记录</button>
+        <button class="nav-item" data-view="safety"><span>07</span>医学与合规</button>
+      </nav>
+      <div class="sidebar-note"><span>核心原则</span><p>针灸缓解症状，康复重建功能。</p></div>
+    </aside>
+
+    <main id="main" class="main">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" aria-label="打开导航" aria-expanded="false">菜单</button>
+        <p><span class="live-dot"></span> 本周主线：先判断，再治疗；缓解后，把功能练回来</p>
+        <button class="ghost-button" data-action="export">导出记录</button>
+      </header>
+
+      <section class="view is-visible" id="dashboard" data-view-panel>
+        <div class="page-heading">
+          <div><p class="eyebrow">WEEKLY CONTROL ROOM</p><h1>这一周，只把一件事讲透。</h1></div>
+          <p class="lede">面向 30—55 岁城市人群，围绕颈、肩、腰、膝，把疼痛解释、功能评估与康复训练连成一个可信的医生方法论。</p>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="focus-card panel">
+            <div class="panel-label"><span>本周主题</span><b>腰 · 久坐后反复酸痛</b></div>
+            <div class="focus-copy">
+              <span class="kicker">一句结论</span>
+              <h2>别急着揉腰，先看身体在哪一步失去了选择。</h2>
+              <p>用一个具体场景开场，用一个安全自测建立参与，再解释“缓解症状”和“恢复功能”为什么是两件事。</p>
+            </div>
+            <div class="focus-actions">
+              <button class="primary-button" data-jump="script">开始写脚本</button>
+              <button class="text-button" data-jump="calendar">查看本周排期 <span>→</span></button>
+            </div>
+          </article>
+
+          <article class="score-card panel">
+            <p class="panel-title">内容配比</p>
+            <div class="score-ring" aria-label="本周完成度 0%"><span id="dashboardProgress">0%</span><small>本周完成</small></div>
+            <div class="ratio-list">
+              <p><span>高频疼痛</span><b>40%</b></p><i style="--w:40%"></i>
+              <p><span>自测 / 动作</span><b>20%</b></p><i style="--w:20%"></i>
+              <p><span>误区 / 针灸</span><b>25%</b></p><i style="--w:25%"></i>
+              <p><span>病例 / 人格</span><b>15%</b></p><i style="--w:15%"></i>
+            </div>
+          </article>
+        </div>
+
+        <article class="method panel">
+          <div class="section-heading"><div><p class="eyebrow">THE METHOD</p><h2>疼痛六步管理法</h2></div><p>每条内容只讲清一步，但始终让观众看见完整路径。</p></div>
+          <ol class="method-steps">
+            <li><b>01</b><span>辨危险</span><small>先排除不适合居家处理的情况</small></li>
+            <li><b>02</b><span>找诱因</span><small>动作、负荷、环境与病程</small></li>
+            <li><b>03</b><span>降疼痛</span><small>把症状降到可活动的窗口</small></li>
+            <li><b>04</b><span>恢复活动</span><small>逐步拿回关节与身体选择</small></li>
+            <li><b>05</b><span>重建力量</span><small>让身体重新承受真实生活</small></li>
+            <li><b>06</b><span>防复发</span><small>管理负荷，而不是追求零风险</small></li>
+          </ol>
+        </article>
+
+        <div class="dashboard-bottom">
+          <article class="panel weekly-list">
+            <div class="section-heading compact"><div><p class="eyebrow">THIS WEEK</p><h2>五条内容，一个闭环</h2></div><span id="weekCount">0 / 5</span></div>
+            <label><input type="checkbox" data-week-task><span><b>周一 · 误区</b>腰痛到底该躺着，还是该动？</span></label>
+            <label><input type="checkbox" data-week-task><span><b>周二 · 自测</b>坐久腰酸，先做这两个安全观察</span></label>
+            <label><input type="checkbox" data-week-task><span><b>周三 · 病例思维</b>片子不重，为什么还是痛？</span></label>
+            <label><input type="checkbox" data-week-task><span><b>周四 · 针灸真相</b>针灸有效后，为什么还要训练？</span></label>
+            <label><input type="checkbox" data-week-task><span><b>周五 · 复盘</b>读评论，把下周问题变成选题</span></label>
+          </article>
+          <article class="panel rule-card">
+            <p class="eyebrow">EDITORIAL FILTER</p><h2>发布前的 4 个问题</h2>
+            <ul><li>观众能在 3 秒内认出自己的场景吗？</li><li>这一条是否只解决一个问题？</li><li>给出的动作有清楚的适用边界吗？</li><li>有没有把“可能”说成“必然”？</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="strategy" data-view-panel>
+        <div class="page-heading slim-heading">
+          <div><p class="eyebrow">POSITIONING SYSTEM</p><h1>先让别人一句话记住你。</h1></div>
+          <p class="lede">这套定位不把针灸神秘化，也不把康复讲成动作清单。你提供的是一条完整路径：解释疼痛、降低症状、恢复功能、管理复发。</p>
+        </div>
+
+        <div class="positioning-board panel">
+          <div class="positioning-main"><span>建议对外定位</span><blockquote>专注颈肩腰膝疼痛与功能康复：针灸帮助缓解症状，康复训练帮助身体重新面对生活。</blockquote></div>
+          <dl class="positioning-facts">
+            <div><dt>核心受众</dt><dd>30—55 岁，久坐、通勤、运动与家庭负荷交织的城市人群</dd></div>
+            <div><dt>核心问题</dt><dd>疼痛反复、检查结果与感受不一致、不知道该休息还是该动</dd></div>
+            <div><dt>信任凭证</dt><dd>临床判断过程、适用边界、分阶段目标、可验证的功能变化</dd></div>
+            <div><dt>不做什么</dt><dd>穴位万能论、保证治愈、吓人看片、脱离评估的“一招见效”</dd></div>
+          </dl>
+        </div>
+
+        <div class="value-stack">
+          <article><span>01 · 入口</span><h2>先回应难受</h2><p>用具体场景和简单观察帮助观众描述问题；不在短视频里隔空下诊断。</p><b>关键词：止痛、理解、安心</b></article>
+          <article><span>02 · 专业</span><h2>再解释反复</h2><p>把负荷、动作、睡眠、情绪和恢复讲成一组可理解的影响因素。</p><b>关键词：判断、诱因、功能</b></article>
+          <article><span>03 · 结果</span><h2>最后重建能力</h2><p>让目标从“不痛”升级为能坐、能走、能跑、能抱孩子、能持续工作。</p><b>关键词：活动、力量、复发管理</b></article>
+        </div>
+
+        <article class="panel matrix-panel">
+          <div class="section-heading"><div><p class="eyebrow">CONTENT ENGINE</p><h2>用矩阵生成选题，不靠灵感硬撑</h2></div><p>每次只从每列选择一个要素，就能得到一个具体、可拍、可复用的问题。</p></div>
+          <div class="formula" aria-label="内容选题公式">
+            <span>人群<small>上班族 / 跑者 / 40+</small></span><i>×</i><span>部位<small>颈 / 肩 / 腰 / 膝</small></span><i>×</i><span>场景<small>久坐 / 睡醒 / 运动</small></span><i>×</i><span>冲突<small>误区 / 反常识 / 选择</small></span><i>×</i><span>形式<small>自测 / 病例 / 动作</small></span>
+          </div>
+          <div class="formula-result"><span>示例</span><b>久坐上班族 × 腰 × 下班后酸痛 × 先别揉 × 30 秒观察</b><p>“坐久腰酸的人，别急着揉腰，先看看你站起来时身体做了什么。”</p></div>
+        </article>
+
+        <div class="strategy-grid">
+          <article class="panel columns-panel">
+            <div class="section-heading compact"><div><p class="eyebrow">7 REPEATABLE SERIES</p><h2>七个固定栏目</h2></div></div>
+            <ol class="number-list">
+              <li><b>30 秒自测</b><span>让观众参与，但不把测试包装成诊断</span></li>
+              <li><b>医生拆误区</b><span>拆掉绝对化结论，给出更准确的新框架</span></li>
+              <li><b>门诊高频问</b><span>从真实疑问切入，先给结论再解释</span></li>
+              <li><b>今天练一个</b><span>一个动作、一个目标、一个停止条件</span></li>
+              <li><b>病例怎么想</b><span>展示判断路径，彻底去除身份信息</span></li>
+              <li><b>针灸讲真话</b><span>解释预期、感受、疗程与训练衔接</span></li>
+              <li><b>身体说明书</b><span>把运动、睡眠、衰老放回功能主线</span></li>
+            </ol>
+          </article>
+          <article class="panel voice-panel">
+            <p class="eyebrow">VOICE GUIDE</p><h2>医生感，不是教科书感</h2>
+            <div class="voice-pair"><span>少说</span><s>“肩峰下撞击导致……”</s><span>先说</span><b>“为什么手抬到这里就痛？”</b></div>
+            <div class="voice-pair"><span>少说</span><s>“这个动作治腰突。”</s><span>先说</span><b>“它可能帮你重新开始活动，但不是人人适合。”</b></div>
+            <div class="voice-pair"><span>少说</span><s>“做三次保证好。”</s><span>先说</span><b>“先设一个可以观察的阶段目标。”</b></div>
+            <p class="voice-rule">表达结构：先给结论 → 解释原因 → 给一个动作或选择 → 说明边界。</p>
+          </article>
+        </div>
+
+        <article class="panel platform-panel">
+          <div class="section-heading"><div><p class="eyebrow">ONE IDEA, FOUR CUTS</p><h2>同一个主题，不要四个平台原样复制</h2></div><p>医学结论保持一致，入口、节奏和信息密度随使用场景变化。</p></div>
+          <div class="platform-grid">
+            <div><b>抖音</b><span>30—60 秒</span><p>一个冲突 + 一个演示；前三秒直接进入症状场景。</p></div>
+            <div><b>小红书</b><span>图文 / 45—90 秒</span><p>做成可保存清单：误区、判断顺序、注意事项。</p></div>
+            <div><b>视频号</b><span>45—90 秒</span><p>语速稍稳，补足为什么与适用边界，面向家庭健康决策。</p></div>
+            <div><b>B 站</b><span>6—15 分钟</span><p>用评估逻辑串联机制、常见分型、训练进阶与病例思路。</p></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="view" id="library" data-view-panel>
+        <div class="page-heading slim-heading">
+          <div><p class="eyebrow">IDEA LIBRARY · 72 TOPICS</p><h1>先选具体场景，再讲医学。</h1></div>
+          <p class="lede">每个选题都配有栏目、切入角度和拍摄提示。点“带入脚本”即可在脚本工坊继续加工。</p>
+        </div>
+        <div class="library-toolbar panel">
+          <label class="search-field"><span>搜索选题</span><input id="topicSearch" type="search" placeholder="例如：久坐、肩痛、针灸、跑步"></label>
+          <label><span>内容支柱</span><select id="pillarFilter"><option value="all">全部支柱</option></select></label>
+          <label><span>固定栏目</span><select id="seriesFilter"><option value="all">全部栏目</option></select></label>
+          <button class="secondary-button" id="randomTopic">随机挑一条</button>
+        </div>
+        <div class="library-summary"><p>找到 <b id="topicCount">72</b> 条可执行选题</p><button class="text-button dark" id="clearFilters">清除筛选</button></div>
+        <div class="topic-grid" id="topicGrid"></div>
+      </section>
+
+      <section class="view" id="script" data-view-panel>
+        <div class="page-heading slim-heading">
+          <div><p class="eyebrow">SCRIPT STUDIO</p><h1>一条视频，只解决一个问题。</h1></div>
+          <p class="lede">按 60—90 秒临床科普结构写作。字数只作节奏参考，医学边界必须由本人结合实际审核。</p>
+        </div>
+        <div class="script-layout">
+          <form class="panel script-form" id="scriptForm">
+            <div class="form-heading"><div><p class="eyebrow">WRITE</p><h2>六段式短视频脚本</h2></div><span id="durationEstimate">约 0 秒</span></div>
+            <label><span>选题标题</span><input id="scriptTitle" name="title" placeholder="例：腰痛到底该躺着，还是该动？"></label>
+            <label><span>0—3 秒 · 场景冲突</span><textarea id="scriptHook" name="hook" rows="2" placeholder="说出观众正在做的事，再制造一个认知停顿。"></textarea><small>模板：如果你一____就____，先别急着____。</small></label>
+            <label><span>3—12 秒 · 一句结论</span><textarea id="scriptThesis" name="thesis" rows="2" placeholder="先给方向，不卖关子。"></textarea><small>避免“绝对、一定、保证、彻底”等词。</small></label>
+            <label><span>12—35 秒 · 解释为什么</span><textarea id="scriptExplain" name="explain" rows="3" placeholder="只保留一个机制，用普通人第一次听就懂的语言。"></textarea></label>
+            <label><span>35—60 秒 · 一个观察或动作</span><textarea id="scriptAction" name="action" rows="3" placeholder="写清目标、做法、次数，以及出现什么情况要停止。"></textarea></label>
+            <label><span>60—75 秒 · 边界与危险信号</span><textarea id="scriptBoundary" name="boundary" rows="3" placeholder="说明不适用人群；出现进行性无力等异常时建议线下评估。"></textarea></label>
+            <label><span>结尾 · 固定记忆点</span><textarea id="scriptClose" name="close" rows="2">先判断，再治疗；症状缓解以后，还要把功能练回来。</textarea></label>
+            <fieldset><legend>发布前自检</legend>
+              <label class="check-line"><input type="checkbox" data-script-check><span>没有远程诊断或保证疗效</span></label>
+              <label class="check-line"><input type="checkbox" data-script-check><span>动作说明了目标、停止条件和适用边界</span></label>
+              <label class="check-line"><input type="checkbox" data-script-check><span>病例已获授权并完成彻底匿名化</span></label>
+              <label class="check-line"><input type="checkbox" data-script-check><span>证据结论与原始来源一致且标注日期</span></label>
+            </fieldset>
+            <div class="form-actions"><button type="button" class="primary-button" id="copyScript">复制脚本</button><button type="button" class="secondary-button" id="saveToRecords">加入发布记录</button><button type="reset" class="text-button dark">清空</button></div>
+          </form>
+          <aside class="panel script-preview">
+            <div class="preview-top"><span>脚本预览</span><i id="checkStatus">0 / 4 自检</i></div>
+            <article id="scriptPreview"><p class="preview-empty">在左侧开始写，完整口播稿会实时出现在这里。</p></article>
+            <div class="preview-tip"><b>拍摄提醒</b><p>镜头优先拍“人如何完成动作”，不要长时间只拍身体局部或针具。字幕突出结论与边界，每屏不超过两行。</p></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="calendar" data-view-panel>
+        <div class="page-heading slim-heading">
+          <div><p class="eyebrow">90-DAY OPERATING PLAN</p><h1>十二周，把方法论做成记忆。</h1></div>
+          <p class="lede">每周 5 条短内容 + 1 次复盘。先验证受众与表达，再固定栏目，最后才扩平台、放大高反馈主题。</p>
+        </div>
+        <div class="phase-switch" role="tablist" aria-label="90 天阶段">
+          <button class="is-active" data-phase="1" role="tab">阶段一 · 验证定位</button>
+          <button data-phase="2" role="tab">阶段二 · 建立栏目</button>
+          <button data-phase="3" role="tab">阶段三 · 复盘放大</button>
+        </div>
+        <div class="phase-overview panel" id="phaseOverview"></div>
+        <div class="week-grid" id="weekGrid"></div>
+        <article class="panel rhythm-panel">
+          <div><p class="eyebrow">WEEKLY RHYTHM</p><h2>每周固定节奏</h2></div>
+          <ol><li><b>周六</b><span>从评论和门诊问题中选 5 题，补证据与边界</span></li><li><b>周日</b><span>一次写完 5 条脚本，安排场景与道具</span></li><li><b>周一</b><span>集中拍摄；同一机位一次拍完同栏目内容</span></li><li><b>周二—六</b><span>发布、回复高价值问题、记录 24h 数据</span></li><li><b>下周六</b><span>只看完播、收藏、有效评论与咨询质量</span></li></ol>
+        </article>
+      </section>
+
+      <section class="view" id="records" data-view-panel>
+        <div class="page-heading slim-heading">
+          <div><p class="eyebrow">CONTENT LOGBOOK</p><h1>记录结论，不只记录播放量。</h1></div>
+          <p class="lede">数据保存在当前浏览器；建议每周导出一次 JSON 备份。复盘的目标，是找到“什么问题值得继续讲”。</p>
+        </div>
+        <div class="record-stats" id="recordStats"></div>
+        <form class="panel record-form" id="recordForm">
+          <div class="form-heading"><div><p class="eyebrow">NEW RECORD</p><h2>新增一条内容记录</h2></div><span>带 * 为必填</span></div>
+          <div class="record-fields">
+            <label class="wide"><span>标题 *</span><input name="title" required placeholder="用观众的问题，而不是疾病名称"></label>
+            <label><span>平台</span><select name="platform"><option>抖音</option><option>小红书</option><option>视频号</option><option>B 站</option><option>其他</option></select></label>
+            <label><span>内容支柱</span><select name="pillar" id="recordPillar"></select></label>
+            <label><span>状态</span><select name="status"><option>想法</option><option>写稿中</option><option>待拍摄</option><option>待发布</option><option>已发布</option></select></label>
+            <label><span>计划 / 发布日期</span><input name="date" type="date"></label>
+            <label><span>播放</span><input name="views" type="number" min="0" inputmode="numeric" placeholder="0"></label>
+            <label><span>收藏</span><input name="saves" type="number" min="0" inputmode="numeric" placeholder="0"></label>
+            <label><span>有效评论</span><input name="comments" type="number" min="0" inputmode="numeric" placeholder="0"></label>
+            <label><span>有效咨询</span><input name="leads" type="number" min="0" inputmode="numeric" placeholder="0"></label>
+            <label class="wide"><span>复盘结论</span><textarea name="note" rows="2" placeholder="观众真正卡在哪？下次保留什么、删掉什么、继续追问什么？"></textarea></label>
+          </div>
+          <button class="primary-button" type="submit">保存记录</button>
+        </form>
+        <div class="records-toolbar"><label class="search-field"><span>筛选记录</span><input id="recordSearch" type="search" placeholder="搜索标题、平台或结论"></label><div><button class="secondary-button" id="exportJson">导出 JSON</button><button class="secondary-button" id="exportMarkdown">导出 Markdown</button><label class="import-button">导入 JSON<input id="importJson" type="file" accept="application/json"></label></div></div>
+        <div class="records-list panel" id="recordsList"></div>
+      </section>
+
+      <section class="view" id="safety" data-view-panel>
+        <div class="page-heading slim-heading">
+          <div><p class="eyebrow">CLINICAL &amp; COMPLIANCE GUARDRAILS</p><h1>越专业，越要把边界说清楚。</h1></div>
+          <p class="lede">以下用于内容发布前自查，不替代所在机构的审核制度、平台规则或专业法律意见。</p>
+        </div>
+        <div class="safety-banner"><b>内容的任务是帮助公众更好地理解和就医，不是在评论区完成诊断。</b><p>教育优先 · 风险分层 · 证据透明 · 隐私最小化 · 广告可识别</p></div>
+        <div class="safety-grid">
+          <article class="panel safety-card"><span class="safety-index">01</span><h2>医学表达</h2><ul><li>用“可能、常见、需要结合评估”表达不确定性。</li><li>清楚区分症状缓解、功能改善与疾病治愈。</li><li>自测只用于观察，不命名疾病、不替代检查。</li><li>动作给出目标、剂量、进阶与停止条件。</li><li>证据引用写明适用人群、年份和局限。</li></ul></article>
+          <article class="panel safety-card warning"><span class="safety-index">02</span><h2>需要线下评估的信号</h2><ul><li>近期严重外伤，或疼痛快速加重。</li><li>进行性肢体无力、明显感觉异常。</li><li>大小便功能异常或会阴区感觉异常。</li><li>伴发热、明显全身不适或原因不明的体重下降。</li><li>任何让本人担心的急性、持续或异常症状。</li></ul><p class="fine-print">短视频只提示就医方向；不要用一张清单制造恐慌，也不要宣称排除诊断。</p></article>
+          <article class="panel safety-card"><span class="safety-index">03</span><h2>病例与隐私</h2><ul><li>使用病例前取得可追溯的授权。</li><li>删除姓名、面容、日期、地点、罕见组合等识别线索。</li><li>不要展示病历、影像条码、处方、联系方式。</li><li>不让患者评价或形象承担“疗效证明”的作用。</li><li>说明个案不代表他人结果。</li></ul></article>
+          <article class="panel safety-card"><span class="safety-index">04</span><h2>广告与转化</h2><ul><li>知识内容与商业推广保持清楚区分。</li><li>避免“包好、根治、三次见效、有效率”等承诺。</li><li>涉及机构、服务、联系方式前，先走内部与当地合规审核。</li><li>商业合作、付费推荐和购买方式按规则显著标识。</li><li>保留脚本、证据、授权和发布日期，方便复核。</li></ul></article>
+        </div>
+        <article class="panel evidence-panel">
+          <div class="section-heading"><div><p class="eyebrow">SOURCE SHELF</p><h2>建议从原始来源开始</h2></div><p>最后核对：原文谈的是谁、什么干预、什么结果，而不是只看结论摘要。</p></div>
+          <div class="source-grid">
+            <a href="https://www.who.int/publications/i/item/9789240081789" target="_blank" rel="noreferrer"><span>临床管理</span><b>WHO 慢性原发性腰痛非手术管理指南</b><small>教育、运动与多种干预应置于整体、以人为中心的管理框架中。</small></a>
+            <a href="https://www.cdc.gov/health-literacy/php/develop-materials/plain-language.html" target="_blank" rel="noreferrer"><span>公众传播</span><b>CDC Plain Language Materials &amp; Resources</b><small>重要信息放前面，用受众第一次就能理解的语言与结构。</small></a>
+            <a href="https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_d93a579afd45413e8576e4623fab348f.html" target="_blank" rel="noreferrer"><span>互联网广告</span><b>《互联网广告管理办法》</b><small>关注知识介绍、体验分享与广告可识别性的边界。</small></a>
+            <a href="https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/ggjgs/art/2023/art_6584dc1c94c2408db7c73f0b5e3d225a.html" target="_blank" rel="noreferrer"><span>医疗广告</span><b>《医疗广告管理办法》</b><small>核对诊疗方法、疗效保证、有效率与患者证明等限制。</small></a>
+          </div>
+        </article>
+        <p class="medical-note">本网站是内容策划与记录工具，不提供诊断、治疗或个体化医疗建议。医学内容发布前应由具备相应资质的专业人员结合最新指南、执业范围与当地规定审核。</p>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="topicDialog" class="topic-dialog"><form method="dialog"><button class="dialog-close" aria-label="关闭">×</button></form><div id="topicDialogContent"></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
